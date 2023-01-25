@@ -1,3 +1,26 @@
-#index:
+
+
+
+#home:
 #    path: /
-#    controller: App\Controller\DefaultController::index
+#   controller: App\Controller\DefaultController::home
+
+#contact:
+#    #http://localhost:8000/contact
+#    path: /contact
+#   controller: App\Controller\DefaultController::contact
+
+#permet de rediriger une Url vers une autre route
+#mentions-legales:
+#  path: /mentions-legales
+#  controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::urlRedirectAction
+#  defaults:
+#    path: /
+#    permanent: true
+#TemplateController : permet de générer une page sans avoir besoin de créer son controller.
+mentions-legales:
+  path: /mentions-legales
+  controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
+  defaults:
+    template: static/mentions-legales.html.twig
+
